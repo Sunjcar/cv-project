@@ -64,7 +64,6 @@ export class App extends Component {
     return (
       <div>
         <div className='Personal-Info'>
-          <h1> Personal Information</h1>
           <form onSubmit={this.onSubmitCv}>
             <h3>
               <label htmlFor='userName' className='Name'>Name</label>

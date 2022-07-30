@@ -1,7 +1,8 @@
 import './App.css';
-
+import uniqid from 'uniqid'
 import React, { Component } from 'react'
 import GeneralInfo from './Components/GeneralInfo';
+import Tasks from './Components/Tasks';
 
 export class App extends Component {
   constructor(props) {
@@ -14,6 +15,14 @@ export class App extends Component {
        schoolName: '',
        degreeName:'',
        date: '',
+       companyName: '',
+       position: '',
+       timeSpent: '',
+       task: {
+         text: '',
+         id: uniqid()
+       },
+       tasks: []
     }
   }
 
@@ -55,12 +64,55 @@ export class App extends Component {
    }
   }
 
+  handleCompanyChange = (e) => {
+    this.setState({
+      companyName: e.target.value
+    })
+  }
+
+  handlePositionChange = (e) => {
+    this.setState({
+      position: e.target.value
+    })
+  }
+
+  handleTaskChange = (e) =>{
+    this.setState({
+      task:{
+        text: e.target.value,
+        id: this.state.tasks
+      }
+    })
+  }
+
+  handleTimeChange =(e) =>{
+    this.setState({
+      timeSpent: e.target.value
+    })
+  }
+
   onSubmitCv = (e) => {
     e.preventDefault();
+    this.setState({
+      name: '',
+      email: '',
+      phoneNumber: '',
+      schoolName: '',
+      degreeName:'',
+      date: '',
+      companyName: '',
+      position: '',
+      timeSpent:'',
+      task:{
+        text: '',
+        id:uniqid()
+      },
+      tasks: this.state.tasks.concat(this.state.task)
+    })
   }
   render() {
 
-    const {name,email, phoneNumber, schoolName, degreeName, date} = this.state
+    const {name,email, phoneNumber, schoolName, degreeName, date, companyName, position, timeSpent, task, tasks} = this.state
     return (
       <div>
         <div className='Personal-Info'>
@@ -84,7 +136,7 @@ export class App extends Component {
                 placeholder='123456789'
                 onChange={this.handleNumberChange}/>
             </h3>
-            <h3>
+            <h3 className='school-info'>
               <label htmlFor='schoolName' className='schoolName'>School Name</label>
               <input
                 type='text'
@@ -103,7 +155,31 @@ export class App extends Component {
                 value={date}
                 onChange={this.handleDateChange}/>
             </h3>
-            <button type='submit' disabled={!name || !email || !phoneNumber}> Submit </button>
+            <h3>
+              <label htmlFor='companyName'> Company </label>
+              <input
+                type='text'
+                value={companyName}
+                onChange={this.handleCompanyChange}/>
+              <label htmlFor='company-position'> Position </label>
+              <input
+                type='text'
+                value={position}
+                onChange={this.handlePositionChange}/>
+              <label htmlFor='years-worked'> Time spent at company </label>
+              <input
+                type='text'
+                value={timeSpent}
+                onChange={this.handleTimeChange}/>
+            </h3>
+            <h4>
+              <label htmlFor='tasks'> Tasks </label>
+              <input
+                type='text'
+                value= {task.text}
+                onChange={this.handleTaskChange}/>
+              <button type='submit' disabled={!task.text}> Add Task </button>
+            </h4>
           </form>
           <GeneralInfo 
             name = {name} 
@@ -111,7 +187,11 @@ export class App extends Component {
             phoneNumber = {phoneNumber}
             schoolName = {schoolName}
             degreeName ={degreeName}
-            date = {date}/>
+            date = {date}
+            companyName = {companyName}
+            position = {position}
+            timeSpent = {timeSpent}/>
+          <Tasks tasks = {tasks}/>
         </div>
       </div>
     )

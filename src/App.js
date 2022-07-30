@@ -10,7 +10,10 @@ export class App extends Component {
     this.state = {
        name: '',
        email: '',
-       phoneNumber: ''
+       phoneNumber: '',
+       schoolName: '',
+       degreeName:'',
+       date: '',
     }
   }
 
@@ -33,16 +36,34 @@ export class App extends Component {
    }
   }
   
+  handleSchoolChange = (e)=> {
+    this.setState({
+      schoolName: e.target.value
+    })
+  }
+
+  handleDegreeChange = (e) => {
+    this.setState({
+      degreeName: e.target.value
+    })
+  }
+
+  handleDateChange = (e) =>{
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === '' || re.test(e.target.value)) {
+      this.setState({date: e.target.value})
+   }
+  }
 
   onSubmitCv = (e) => {
     e.preventDefault();
   }
   render() {
 
-    const {name,email, phoneNumber} = this.state
+    const {name,email, phoneNumber, schoolName, degreeName, date} = this.state
     return (
       <div>
-        <div>
+        <div className='Personal-Info'>
           <h1> Personal Information</h1>
           <form onSubmit={this.onSubmitCv}>
             <h3>
@@ -51,15 +72,11 @@ export class App extends Component {
                 type='text' 
                 value={name} 
                 onChange={this.handleNameChange}/>
-            </h3>
-            <h3>
               <label htmlFor='userEmail' className='Email'>Email</label>
               <input 
               type='text' 
               value={email} 
               onChange={this.handleEmailChange}/>
-            </h3>
-            <h3>
               <label htmlFor='userPhone' className='Phone'>Phone Number</label>
               <input 
                 className='phoneNumber'
@@ -68,12 +85,34 @@ export class App extends Component {
                 placeholder='123456789'
                 onChange={this.handleNumberChange}/>
             </h3>
+            <h3>
+              <label htmlFor='schoolName' className='schoolName'>School Name</label>
+              <input
+                type='text'
+                value={schoolName}
+                onChange={this.handleSchoolChange}/>
+              <label htmlFor='degree' className='degreeName'> Degree </label>
+              <input
+                type='text'
+                value={degreeName}
+                onChange={this.handleDegreeChange}/>
+              <label htmlFor='dateOfStudy' className='dateOfStudy'> Year of Completion </label>
+              <input
+                type='text'
+                minLength={4}
+                maxLength={4}
+                value={date}
+                onChange={this.handleDateChange}/>
+            </h3>
             <button type='submit' disabled={!name || !email || !phoneNumber}> Submit </button>
           </form>
           <GeneralInfo 
             name = {name} 
             email={email} 
-            phoneNumber = {phoneNumber}/>
+            phoneNumber = {phoneNumber}
+            schoolName = {schoolName}
+            degreeName ={degreeName}
+            date = {date}/>
         </div>
       </div>
     )

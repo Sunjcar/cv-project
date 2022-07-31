@@ -113,9 +113,13 @@ export class App extends Component {
     const {name,email, phoneNumber, schoolName, degreeName, date, companyName, position, from, to, task, tasks} = this.state
     return (
       <div>
+        <div className='header'>
+          <header> CV CREATOR </header>
+        </div>
         <div className='main'>
           <div className='form'>
             <form onSubmit={this.onSubmitCv}>
+              <h1>Fill In</h1>
               <h3>
                 <label htmlFor='userName' className='Name'>Name</label>
                 <input 
@@ -176,13 +180,13 @@ export class App extends Component {
                   value={to}
                   onChange={this.handleToChange}/>
               </h3>
+              <button > Add Experience</button>
               <h4>
                 <label htmlFor='tasks'> Tasks </label>
                 <input
                   type='text'
                   value= {task.text}
                   onChange={this.handleTaskChange}/>
-                <button type='submit' disabled={!task.text}> Add Task </button>
               </h4>
             </form>
           </div>

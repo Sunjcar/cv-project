@@ -1,9 +1,9 @@
 import React from 'react'
 
 function GeneralInfo(props) {
-    const {name, email, phoneNumber, schoolName, degreeName, date, companyName, position, timeSpent} = props
+    const {name, email, phoneNumber, schoolName, degreeName, date, companyName, position, from, to} = props
   return (
-    <div>
+    <div className='Personal-Info'>
         <h1>Personal Information</h1>
         <h3>Name: {name}</h3>
         <h3>Email: {email}</h3>
@@ -15,8 +15,9 @@ function GeneralInfo(props) {
         <h1>Work Experience</h1>
         <h3>Company: {companyName}</h3>
         <h3>Position/Title: {position}</h3>
-        <h3>Worked From: {timeSpent}</h3>
-        <h3>Tasks: </h3>
+        <h3>From: {from}</h3>
+        <h3>To: {to}</h3>
+
     </div>
   )
 }

@@ -1,5 +1,27 @@
+*{
+  background-color: #cbd5e1;
+}
+
+#root{
+  display:grid;
+  justify-content: space-around;
+}
+
+.main{
+  display: flex;
+  -webkit-box-pack: justify;
+  gap: 4rem;
+  justify-content: space-between;
+  max-width: 1800px;
+  padding: 4rem 8rem;
+
+  
+}
 label{
-  display: inline-block;
+  display: flex;
   width: 250px;
   text-align: right;
 }
+
+
+

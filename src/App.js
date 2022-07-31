@@ -186,7 +186,7 @@ export class App extends Component {
                   type='text'
                   value= {task.text}
                   onChange={this.handleTaskChange}/>
-                <button onChange={this.handleTaskChange}> Add Task</button>
+                <button disabled={!task.text} onChange={this.handleTaskChange}> Add Task</button>
               </h4>
             </form>
           </div>

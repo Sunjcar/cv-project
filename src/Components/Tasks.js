@@ -4,13 +4,13 @@ function Tasks(props) {
 
     const {tasks} = props
   return (
-    <ul>
+    <h3>Tasks:<ul>
         {tasks.map((task) => {
-            return <li key={tasks.id}>
+            return <li key={task.id}>
                 {task.text}
             </li>
         })}
-    </ul>
+    </ul></h3>
   )
 }
 

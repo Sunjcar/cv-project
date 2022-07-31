@@ -8,7 +8,6 @@
   gap: 2rem;
   justify-content: space-between;
   padding: 2rem 15rem;
-
 }
 
 header{
@@ -23,6 +22,11 @@ header{
     color: rgb(238, 238, 238);
     font-size: 2.2rem;
     background-color: #64748b;
+}
+
+.Personal-Information{
+  display:flex;
+  gap: 8rem;
 }
 
 label{

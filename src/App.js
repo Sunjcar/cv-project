@@ -180,13 +180,13 @@ export class App extends Component {
                   value={to}
                   onChange={this.handleToChange}/>
               </h3>
-              <button > Add Experience</button>
               <h4>
                 <label htmlFor='tasks'> Tasks </label>
                 <input
                   type='text'
                   value= {task.text}
                   onChange={this.handleTaskChange}/>
+                <button onChange={this.handleTaskChange}> Add Task</button>
               </h4>
             </form>
           </div>

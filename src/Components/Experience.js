@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import GeneralInfo from './GeneralInfo'
 import uniqid from 'uniqid'
 import Tasks from './Tasks'
 import WorkInfo from './WorkInfo'
@@ -18,7 +17,7 @@ export class Experience extends Component {
             text: '',
             id: uniqid()
           },
-          tasks: []
+          tasks: [],
        }
  }
 

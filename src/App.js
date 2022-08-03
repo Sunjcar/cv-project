@@ -23,9 +23,11 @@ export class App extends Component {
         <div className='main'>
           <div className='form'>
             <div>
-              <h1>Fill In</h1>
+                <h1>Personal Information</h1>
                 <PersonalInfo/>
+                <h1>Education Background</h1>
                 <Education/>
+                <h1>Work Experience</h1>
                 <Experience/>
                 {[...Array(this.state.count)].map((_, i) => <Experience key={i}/>)}
                 <button type='button' onClick={() => this.setState({count:count + 1})}> Add Job </button> 

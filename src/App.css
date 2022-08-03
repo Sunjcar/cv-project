@@ -26,7 +26,13 @@ header{
 
 .Personal-Information{
   display:flex;
-  gap: 8rem;
+  gap:10rem;
+}
+
+.Personal-Info{
+  display:flex;
+  align-items: flex-start;
+  gap: 5rem;
 }
 
 label{

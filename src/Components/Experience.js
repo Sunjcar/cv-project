@@ -98,11 +98,7 @@ export class Experience extends Component {
                 <button disabled={!task.text}> Add Task</button>
             </h3>
             <div>
-              <WorkInfo
-                companyName = {companyName}
-                position = {position}
-                from = {from}
-                to = {to}/>
+              <WorkInfo/>
               <Tasks tasks={tasks}/>
             </div>
         </form>

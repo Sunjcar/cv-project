@@ -3,13 +3,18 @@ import React from 'react'
 
 function GeneralInfo(props) {
 
-    const {name, email, phoneNumber} = props
+    const {name ,currentJob, email, phoneNumber, address} = props
   return (
     <div className='Personal-Info'>
-        <h1>Personal Information</h1>
-        <h3>Name: {name}</h3>
-        <h3>Email: {email}</h3>
-        <h3>Phone Number: {phoneNumber}</h3>
+      <div>
+        <h1>{name}</h1>
+        <h3>{currentJob}</h3>
+      </div>
+      <div className='contact-info'>
+        <h6>Email: {email}</h6>
+        <h6>Phone Number: {phoneNumber}</h6>
+        <h6>Address: {address}</h6>
+      </div>
     </div>
   )
 }

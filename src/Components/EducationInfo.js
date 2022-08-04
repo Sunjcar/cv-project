@@ -3,11 +3,19 @@ import React from 'react'
 function EducationInfo(props) {
     const {schoolName, degreeName, date} = props
   return (
-    <div className='Personal-Info'>
-        <h1>Education Background</h1>
-        <h3>School: {schoolName}</h3>
-        <h3>Degree in: {degreeName}</h3>
-        <h3>Year Graduated: {date}</h3>
+    <div>
+        <h3 className='education-title'>Education</h3>
+        <div className='education-content'>
+          <div className='course-name'>
+            <p>{degreeName}</p>
+          </div>
+          <div className='education-info'>
+            <p>{schoolName}  </p>
+            <div>
+              <p> | {date}</p>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

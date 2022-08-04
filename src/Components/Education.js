@@ -38,16 +38,16 @@ export class Education extends Component {
     return (
       <form className='Personal-Information'>
         <h3 className='school-info'>
-            <label htmlFor='schoolName' className='schoolName'>School Name</label>
-            <input
-                type='text'
-                value={schoolName}
-                onChange={this.handleSchoolChange}/>
             <label htmlFor='degree' className='degreeName'> Degree </label>
             <input
                 type='text'
                 value={degreeName}
                 onChange={this.handleDegreeChange}/>
+            <label htmlFor='schoolName' className='schoolName'>School Name</label>
+            <input
+                type='text'
+                value={schoolName}
+                onChange={this.handleSchoolChange}/>
             <label htmlFor='dateOfStudy' className='dateOfStudy'> Year of Completion </label>
             <input
                 type='text'
@@ -56,10 +56,12 @@ export class Education extends Component {
                 value={date}
                 onChange={this.handleDateChange}/>
         </h3>
-        <EducationInfo 
-          schoolName={schoolName}
-          degreeName={degreeName}
-          date={date}/>
+        <div className='cv-view'>
+          <EducationInfo 
+            schoolName={schoolName}
+            degreeName={degreeName}
+            date={date}/>
+        </div>
       </form>
     )
   }

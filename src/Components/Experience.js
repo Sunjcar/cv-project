@@ -70,16 +70,16 @@ export class Experience extends Component {
     return (
         <form className='Personal-Information' onSubmit={this.onSubmitCv}>
         <h3>
-            <label htmlFor='companyName'> Company </label>
-            <input
-                type='text'
-                value={companyName}
-                onChange={this.handleCompanyChange}/>
             <label htmlFor='company-position'> Position </label>
             <input
                 type='text'
                 value={position}
                 onChange={this.handlePositionChange}/>
+            <label htmlFor='companyName'> Company </label>
+            <input
+                type='text'
+                value={companyName}
+                onChange={this.handleCompanyChange}/>
             <label htmlFor='years-from'> From </label>
             <input
                 type='text'
@@ -97,8 +97,12 @@ export class Experience extends Component {
                 onChange={this.handleTaskChange}/>
                 <button disabled={!task.text}> Add Task</button>
             </h3>
-            <div>
-              <WorkInfo/>
+            <div className='cv-view'>
+              <WorkInfo
+                companyName = {companyName}
+                position = {position}
+                from = {from}
+                to = {to}/>
               <Tasks tasks={tasks}/>
             </div>
         </form>

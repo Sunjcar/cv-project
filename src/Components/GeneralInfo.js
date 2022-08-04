@@ -7,8 +7,8 @@ function GeneralInfo(props) {
   return (
     <div className='Personal-Info'>
       <div>
-        <h1>{name}</h1>
-        <h3>{currentJob}</h3>
+        <h1 className='full-name'>{name}</h1>
+        <h3 className='current-job'>{currentJob}</h3>
       </div>
       <div className='contact-info'>
         <h6>Email: {email}</h6>

@@ -31,7 +31,7 @@ header{
 
 .Personal-Info{
   display:flex;
-  align-items: flex-start;
+  justify-content: space-between;
   gap: 5rem;
 }
 
@@ -41,5 +41,41 @@ label{
   text-align: right;
 }
 
+.cv-view{
+  width: 45vw
+}
 
+.full-name{
+  color:#195c70
+}
+
+.current-job, .task-text{
+  color:#5e5e5e
+}
+
+.education-title, .work-title, .Tasks{
+  color: #81aebb
+}
+.education-content, .work-content{
+  display:flex;
+  justify-content: space-between;
+}
+.education-info{
+  display:flex;
+  gap:1rem
+}
+
+.company-time{
+  display:flex;
+  gap:1rem
+}
+
+.date{
+  display:flex;
+}
+
+.task-content{
+  display:flex;
+  gap: 3rem
+}
 

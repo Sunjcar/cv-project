@@ -8,32 +8,45 @@ export class PersonalInfo extends Component {
     
       this.state = {
         name: '',
+        currentJob: '',
         email: '',
         phoneNumber: '',
+        address:''
       }
     }
 
     handleNameChange = (e) => {
-        this.setState({
+      this.setState({
           name: e.target.value,
         })
       }
+
+    handleJobChange = (e) => {
+      this.setState({
+        currentJob: e.target.value
+      })
+    }
     
-      handleEmailChange = (e) => {
-        this.setState({
+    handleEmailChange = (e) => {
+      this.setState({
           email: e.target.value
         })
       }
     
-      handleNumberChange = (e) => {
-        const re = /^[0-9\b]+$/;
+    handleNumberChange = (e) => {
+      const re = /^[0-9\b]+$/;
         if (e.target.value === '' || re.test(e.target.value)) {
           this.setState({phoneNumber: e.target.value})
        }
       }
 
+    handleAddressChange = (e) => {
+      this.setState({
+        address: e.target.value
+      })
+    }
   render() {
-      const {name, email, phoneNumber} = this.state
+      const {name, currentJob, email, phoneNumber, address} = this.state
     return (
       <form className='Personal-Information'>
               <h3>
@@ -42,6 +55,11 @@ export class PersonalInfo extends Component {
                   type='text' 
                   value={name} 
                   onChange={this.handleNameChange}/>
+                <label htmlFor='Current Job' className='Current-Job'> Current Job </label>
+                <input 
+                  type='text' 
+                  value={currentJob} 
+                  onChange={this.handleJobChange}/>
                 <label htmlFor='userEmail' className='Email'>Email</label>
                 <input 
                 type='text' 
@@ -54,11 +72,20 @@ export class PersonalInfo extends Component {
                   value={phoneNumber}
                   placeholder='123456789'
                   onChange={this.handleNumberChange}/>
+                <label htmlFor='Address' className='Address'> Address </label>
+                <input 
+                  type='text' 
+                  value={address} 
+                  onChange={this.handleAddressChange}/>
               </h3>
-              <GeneralInfo 
-                name = {name} 
-                email={email} 
-                phoneNumber = {phoneNumber}/>
+              <div className='cv-view'>
+                <GeneralInfo 
+                  name = {name} 
+                  currentJob = {currentJob}
+                  email={email} 
+                  phoneNumber = {phoneNumber}
+                  address = {address}/>
+              </div>
       </form>
     )
   }

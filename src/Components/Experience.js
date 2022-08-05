@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import uniqid from 'uniqid'
+import AddWork from './AddWork'
 import Tasks from './Tasks'
-import WorkInfo from './WorkInfo'
-
 
 export class Experience extends Component {
     constructor(props) {
@@ -68,7 +67,7 @@ export class Experience extends Component {
   render() {
     const {companyName, position, from, to, task, tasks} = this.state
     return (
-        <form className='Personal-Information' onSubmit={this.onSubmitCv}>
+        <form className='Experience-Information' onSubmit={this.onSubmitCv}>
         <h3>
             <label htmlFor='company-position'> Position </label>
             <input
@@ -98,11 +97,11 @@ export class Experience extends Component {
                 <button disabled={!task.text}> Add Task</button>
             </h3>
             <div className='cv-view'>
-              <WorkInfo
-                companyName = {companyName}
-                position = {position}
-                from = {from}
-                to = {to}/>
+              <AddWork
+                  companyName = {companyName}
+                  position = {position}
+                  from = {from}
+                  to = {to}/>
               <Tasks tasks={tasks}/>
             </div>
         </form>

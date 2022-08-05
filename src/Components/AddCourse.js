@@ -1,10 +1,9 @@
 import React from 'react'
 
-function EducationInfo(props) {
+function AddCourse(props) {
     const {schoolName, degreeName, dateStart, dateEnd} = props
   return (
     <div>
-        <h3 className='education-title'>Education</h3>
         <div className='education-content'>
           <div className='course-name'>
             <p>{degreeName}</p>
@@ -20,4 +19,4 @@ function EducationInfo(props) {
   )
 }
 
-export default EducationInfo
+export default AddCourse

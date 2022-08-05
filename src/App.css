@@ -7,7 +7,8 @@
   -webkit-box-pack: justify;
   gap: 2rem;
   justify-content: space-between;
-  padding: 2rem 15rem;
+  padding:2rem;
+  width:100%
 }
 
 header{
@@ -17,17 +18,17 @@ header{
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    padding: 3rem 8rem;
     margin: 0px auto;
     color: rgb(238, 238, 238);
     font-size: 2.2rem;
     background-color: #64748b;
+    width:100%
 }
 
-.Personal-Information{
+.Resume {
   display:flex;
-  gap:10rem;
 }
+
 
 .Personal-Info{
   display:flex;
@@ -62,20 +63,26 @@ label{
 }
 .education-info{
   display:flex;
-  gap:1rem
+  gap:.2rem
 }
 
+.Experience-Information{
+  display:flex;
+}
 .company-time{
   display:flex;
-  gap:1rem
+  gap:.2rem
 }
 
 .date{
   display:flex;
 }
 
-.task-content{
-  display:flex;
-  gap: 3rem
+.task-text{
+  word-wrap: break-word
+}
+
+.cv-view{
+  padding-left:2rem
 }
 

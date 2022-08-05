@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AddCourse from './AddCourse'
 import EducationInfo from './EducationInfo'
 import GeneralInfo from './GeneralInfo'
 
@@ -9,7 +10,9 @@ export class Education extends Component {
       this.state = {
         schoolName: '',
         degreeName:'',
-        date: '',
+        dateStart:'',
+        dateEnd: '',
+        count: 0
       }
     }
 
@@ -34,9 +37,9 @@ export class Education extends Component {
     
   render() {
 
-    const {schoolName, degreeName, date} = this.state
+    const {schoolName, degreeName, date, dateStart, dateEnd, count} = this.state
     return (
-      <form className='Personal-Information'>
+      <div className='Education-Information'>
         <h3 className='school-info'>
             <label htmlFor='degree' className='degreeName'> Degree </label>
             <input
@@ -57,12 +60,13 @@ export class Education extends Component {
                 onChange={this.handleDateChange}/>
         </h3>
         <div className='cv-view'>
-          <EducationInfo 
+          <AddCourse
             schoolName={schoolName}
             degreeName={degreeName}
-            date={date}/>
+            dateStart={dateStart}
+            dateEnd={dateEnd}/>
         </div>
-      </form>
+      </div>
     )
   }
 }

@@ -11,7 +11,6 @@ export class App extends Component {
     super(props)
   
     this.state = {
-       count: 0
     }
   }
   render() {
@@ -24,9 +23,6 @@ export class App extends Component {
         <div className='main'>
           <div>
             <Resume/>
-                {[...Array(this.state.count)].map((_, i) => <Experience key={i}/>)}
-                <button className='jobButton' type='button' onClick={() => this.setState({count:count + 1})}> Add Job </button> 
-                <button type='button' disabled={!count} onClick={() => this.setState({count:count - 1})}> Remove Job </button> 
         </div>
       </div>
       </div>

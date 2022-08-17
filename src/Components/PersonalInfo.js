@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import GeneralInfo from './GeneralInfo'
 
 export class PersonalInfo extends Component {
 
@@ -7,85 +6,54 @@ export class PersonalInfo extends Component {
       super(props)
     
       this.state = {
-        name: '',
-        currentJob: '',
-        email: '',
-        phoneNumber: '',
-        address:''
       }
     }
 
-    handleNameChange = (e) => {
-      this.setState({
-          name: e.target.value,
-        })
-      }
-
-    handleJobChange = (e) => {
-      this.setState({
-        currentJob: e.target.value
-      })
-    }
-    
-    handleEmailChange = (e) => {
-      this.setState({
-          email: e.target.value
-        })
-      }
-    
-    handleNumberChange = (e) => {
-      const re = /^[0-9\b]+$/;
-        if (e.target.value === '' || re.test(e.target.value)) {
-          this.setState({phoneNumber: e.target.value})
-       }
-      }
-
-    handleAddressChange = (e) => {
-      this.setState({
-        address: e.target.value
-      })
-    }
   render() {
-      const {name, currentJob, email, phoneNumber, address} = this.state
+      const {name, currentJob, email, phoneNumber, address} = this.props
     return (
-      <form className='Personal-Information'>
-              <h3>
+      <form className='Personal-Information' onSubmit={this.props.submitPersonalInfo}>
+        <div>
+    
                 <label htmlFor='userName' className='Name'>Name</label>
                 <input 
                   type='text' 
+                  id='name'
+                  name='name'
                   value={name} 
-                  onChange={this.handleNameChange}/>
+                  onChange={this.props.personalInfo}/>
                 <label htmlFor='Current Job' className='Current-Job'> Current Job </label>
                 <input 
                   type='text' 
+                  id='currentJob'
+                  name='currentJob'
                   value={currentJob} 
-                  onChange={this.handleJobChange}/>
+                  onChange={this.props.personalInfo}/>
                 <label htmlFor='userEmail' className='Email'>Email</label>
                 <input 
                 type='text' 
+                id='email'
+                name='email'
                 value={email} 
-                onChange={this.handleEmailChange}/>
+                onChange={this.props.personalInfo}/>
                 <label htmlFor='userPhone' className='Phone'>Phone Number</label>
                 <input 
                   className='phoneNumber'
                   type='text' 
+                  id='phoneNumber'
+                  name='phoneNumber'
                   value={phoneNumber}
                   placeholder='123456789'
-                  onChange={this.handleNumberChange}/>
+                  onChange={this.props.personalInfo}/>
                 <label htmlFor='Address' className='Address'> Address </label>
                 <input 
                   type='text' 
+                  id='address'
+                  name='address'
                   value={address} 
-                  onChange={this.handleAddressChange}/>
-              </h3>
-              <div className='cv-view'>
-                <GeneralInfo 
-                  name = {name} 
-                  currentJob = {currentJob}
-                  email={email} 
-                  phoneNumber = {phoneNumber}
-                  address = {address}/>
-              </div>
+                  onChange={this.props.personalInfo}/>
+        </div>
+        <button > Submit </button>
       </form>
     )
   }

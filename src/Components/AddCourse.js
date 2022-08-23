@@ -17,7 +17,8 @@ export class AddCourse extends Component {
             type='text'
             id='degreeName'
             name='degreeName'
-            value={degreeName}
+            required
+            value={degreeName} 
             onChange={this.props.changeEdu}
           />
           <label>School</label>
@@ -25,6 +26,7 @@ export class AddCourse extends Component {
             type='text'
             id='schoolName'
             name='schoolName'
+            required
             value={schoolName}
             onChange={this.props.changeEdu}
           />
@@ -37,6 +39,7 @@ export class AddCourse extends Component {
             name='dateStart'
             value={dateStart}
             onChange={this.props.changeEdu}
+            required
           />
           <label>To</label>
           <input
@@ -45,6 +48,7 @@ export class AddCourse extends Component {
             max='2030-12'
             id='dateEnd'
             name='dateEnd'
+            required
             value={dateEnd}
             onChange={this.props.changeEdu}
           />

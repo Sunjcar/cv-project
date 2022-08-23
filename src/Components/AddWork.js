@@ -3,25 +3,25 @@ import React, { Component } from 'react'
 export class AddWork extends Component {
   constructor(props) {
     super(props)
-  
+
     this.state = {
-       count: 0
+      count: 0
     }
   }
 
 
   render() {
-    const {companyName, position, tasks, from, to} = this.props
+    const { companyName, position, tasks, from, to } = this.props
 
     return (
       <form onSubmit={this.props.submitWork} style={this.props.add}>
         <div>
-          <h1> <br></br></h1>
           <label>Company</label>
           <input
             type='text'
             id='companyName'
             name='companyName'
+            required
             value={companyName}
             onChange={this.props.changeWork}
           />
@@ -30,6 +30,7 @@ export class AddWork extends Component {
             type='text'
             id='position'
             name='position'
+            required
             value={position}
             onChange={this.props.changeWork}
           />
@@ -38,6 +39,7 @@ export class AddWork extends Component {
             type='text'
             id='tasks'
             name='tasks'
+            required
             value={tasks}
             onChange={this.props.changeWork}
           />
@@ -45,7 +47,10 @@ export class AddWork extends Component {
           <input
             type='month'
             id='from'
+            min='January-1910'
+            max='December-2030'
             name='from'
+            required
             value={from}
             onChange={this.props.changeWork}
           />
@@ -53,12 +58,15 @@ export class AddWork extends Component {
           <input
             type='month'
             id='to'
+            min='01-1910'
+            max='12-2030'
             name='to'
+            required
             value={to}
             onChange={this.props.changeWork}
           />
         </div>
-        <button onClick={this.props.count}> Submit </button>
+        <button> Submit </button>
       </form>
     )
   }

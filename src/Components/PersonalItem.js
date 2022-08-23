@@ -33,8 +33,8 @@ export class PersonalItem extends Component {
       <div>
         <div className='Personal-Info' onClick={this.editPersonalInfo} style={view}>
             <div>
-            <h1>{name}</h1>
-            <h3>{currentJob}</h3>
+            <h1 className='full-name'>{name}</h1>
+            <h3 className='current-job'>{currentJob}</h3>
             </div>
             <div>
               <h6>{email}</h6>
@@ -92,10 +92,10 @@ export class PersonalItem extends Component {
                 />     
                 <button onClick={this.updatePersonal}>Save </button>
             </div>
-              <button onClick={this.editPersonalInfo}> Edit </button>
         </div>
     )
   }
 }
 
 export default PersonalItem
+

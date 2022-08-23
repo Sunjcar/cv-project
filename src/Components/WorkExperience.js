@@ -5,7 +5,7 @@ export class WorkExperience extends Component {
   render() {
     return (
       <div>
-          <h2>Work Experience</h2>
+          <h3 className='work-title '>Work Experience</h3>
           <ExperienceList
            allJobs = {this.props.allJobs}
            handleEdit = {this.props.handleEdit}

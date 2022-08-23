@@ -5,7 +5,7 @@ export class EducationExp extends Component {
   render() {
     return (
       <div>
-          <h2>Education</h2>
+          <h3 className='education-title'>Education</h3>
           <EducationList
             allEdu = {this.props.allEdu}
             eduEdit = {this.props.eduEdit}

@@ -14,7 +14,6 @@ export class App extends Component {
     }
   }
   render() {
-    const {count} = this.state
     return (
       <div>
         <div className='header'>

@@ -7,6 +7,7 @@ import WorkExperience from "./WorkExperience";
 import PersonalInfo from "./PersonalInfo";
 import PersonalExp from "./PersonalExp";
 
+
 export class Resume extends Component {
   constructor(props) {
     super(props);
@@ -266,7 +267,7 @@ export class Resume extends Component {
           ) : (
             <></>
           )}
-
+          <hr></hr>
           {this.state.allEdu.length > 0 ? (
             <EducationExp allEdu={this.state.allEdu} eduEdit={this.eduEdit} />
           ) : (

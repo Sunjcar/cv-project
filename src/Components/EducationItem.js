@@ -19,7 +19,7 @@ export class EducationItem extends Component {
   }
 
   render() {
-    const {degreeName, schoolName, dateStart, dateEnd,id } = this.props.education
+    const {degreeName, schoolName, dateStart, dateEnd, id } = this.props.education
     var view = {};
     var edit = {};
 
@@ -31,8 +31,10 @@ export class EducationItem extends Component {
     return (
       <div className='education-item'>
         <div onClick={this.eduEdit} style={view}>
-          <h3>{degreeName}</h3>
-          <h3>{schoolName} | {dateStart} - {dateEnd}</h3>
+          <div className='education-content'>
+          <p className='course-name'>{degreeName}</p>
+          <p className='education-info'>{schoolName} | {dateStart} - {dateEnd}</p>
+          </div>
         </div>
         <div className='education-edit' style={edit}>
           <input
@@ -75,7 +77,6 @@ export class EducationItem extends Component {
             />
             <button onClick={this.updateEdu}> Save </button>
           </div>
-          <button onClick={this.eduEdit}> Edit </button>
       </div>
     )
   }

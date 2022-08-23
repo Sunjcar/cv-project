@@ -5,27 +5,23 @@ export class PersonalInfo extends Component {
     super(props)
 
     this.state = {
-      clicked: false
+      disable: false,
     }
+    this.disableSubmit = this.disableSubmit.bind(this)
   }
 
-  btnClicked = () => {
-    this.setState({
-      clicked: false
-    })
+  disableSubmit = (e) => {
+    this.setState({disable: true})
   }
 
   render() {
     const { name, currentJob, email, phoneNumber, address } = this.props
-
-    var view = {}
-    if (this.btnClicked) {
-      view.display = 'block'
-    } else {
-      view.display = 'none'
+    var disable = {};
+    if(this.state.disable) {
+      disable.display = 'none'
     }
     return (
-      <form className='Personal-Information' onSubmit={this.props.submitPersonalInfo} style={this.props.add}>
+      <form className='Personal-Information' onSubmit={this.props.submitPersonalInfo} style={disable}>
         <div>
           <label htmlFor='userName' className='Name'>Name</label>
           <input
@@ -70,7 +66,7 @@ export class PersonalInfo extends Component {
             onChange={this.props.changeInfo}
           />
         </div>
-        <button disbaled={this.btnClicked} style={view}> Submit </button>
+        <button type='submit' onClick={this.disableSubmit} > Submit </button>
       </form>
     )
   }

@@ -57,6 +57,7 @@ export class Resume extends Component {
     this.submitWork = this.submitWork.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.submitButton = this.submitButton.bind(this);
+    this.deleteWork = this.deleteWork.bind(this);
   }
 
   changeInfo = (e) => {
@@ -195,6 +196,13 @@ export class Resume extends Component {
     }));
   };
 
+  deleteWork = (e,i) => {
+    i = e.currentTarget
+    const allJobs = this.state.allJobs
+    allJobs.splice(i, 1)
+    this.setState({})
+  }
+
   render() {
     const { name, currentJob, email, phoneNumber, address } =
       this.state.personalInfo;
@@ -277,6 +285,7 @@ export class Resume extends Component {
             <WorkExperience
               allJobs={this.state.allJobs}
               handleEdit={this.handleEdit}
+              deleteWork={this.deleteWork}
             />
           ) : (
             <></>

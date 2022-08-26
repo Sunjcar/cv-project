@@ -9,6 +9,7 @@ export class WorkExperience extends Component {
           <ExperienceList
            allJobs = {this.props.allJobs}
            handleEdit = {this.props.handleEdit}
+           deleteWork = {this.props.deleteWork}
           />
       </div>
     )

@@ -1,16 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import PersonalInfo from "./PersonalInfo";
+import Experience from "./Experience";
 
 const ResumeForm = ({
-    resume,
-    onChangePersonal
+  resume,
+  onChangePersonal,
+  onChangeExperience,
+  onAddExperience,
+  onDeleteExperience,
 }) => {
   return (
     <FormWrapper>
-        <PersonalInfo
+      <PersonalInfo
         personalInfo={resume.personalInfo}
-        onChange={onChangePersonal}/>
+        onChange={onChangePersonal} />
+      <Experience
+        experience={resume.experience}
+        onChange={onChangeExperience}
+        onAdd={onAddExperience}
+        onDelete={onDeleteExperience}
+      />
     </FormWrapper>
   )
 }

@@ -63,7 +63,8 @@ const Resume = () => {
   }
 
   const handleChangeEducation = (e, id) => {
-    const [name, value] = e.target
+    const { name,value } = e.target
+
     setResume((prevState) => {
       const newEdu = prevState.education.map((eduItem) => {
         if (eduItem.id === id) {
@@ -71,7 +72,7 @@ const Resume = () => {
         }
         return eduItem
       })
-      return { ...prevState, experience: [...newEdu] }
+      return { ...prevState, education: [...newEdu] }
     })
   }
 

@@ -38,7 +38,7 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
             <TextArea
                 onChange={(e) => onChange(e, id)}
                 type="text"
-                name="to"
+                name="description"
                 placeholder="Description"
                 value={experienceItem.description}
             />

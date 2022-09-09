@@ -14,7 +14,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
       <Input
         onChange={(e) => onChange(e, id)}
         type="text"
-        name="degree"
+        name="school"
         placeholder="Degree"
         value={educationItem.school}
       />

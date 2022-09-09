@@ -2,6 +2,7 @@
 import React from "react";
 import Input from "./Utils/Input";
 import styled from "styled-components";
+import TextArea from "./Utils/Textarea";
 
 const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
     return (
@@ -33,6 +34,13 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 name="to"
                 placeholder="To"
                 value={experienceItem.to}
+            />
+            <TextArea
+                onChange={(e) => onChange(e, id)}
+                type="text"
+                name="to"
+                placeholder="Description"
+                value={experienceItem.description}
             />
             <ButtonWrapper>
                 <button onClick={() => onDelete(id)}>Delete</button>

@@ -1,18 +1,31 @@
-import React, { Component } from 'react'
-import EducationList from './EducationList'
+import React from 'react'
+import Section from './Utils/Section';
+import styled from 'styled-components';
+import EducationItem from './EducationItem';
 
-export class Education extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Education</h2>
-        <EducationList
-         allEdu = {this.props.allEdu}
-         eduEdit = {this.props.eduEdit}
-        />
-      </div>
-    )
-  }
-}
+const Education = ({ education, onChange, onAdd, onDelete }) => {
+  const educationItems = education.map((educationItem) => (
+    <EducationItem
+      key={educationItem.id}
+      id={educationItem.id}
+      educationItem={educationItem}
+      onChange={onChange}
+      onDelete={onDelete}
+    />
+  ))
+  return (
+    <Section title="Education" titlePadding="0.5rem" direction="column">
+      {educationItems}
+      <ButtonWrapper>
+        <button onClick={onAdd}>Add</button>
+      </ButtonWrapper>
+    </Section>
+  );
+};
 
 export default Education
+
+const ButtonWrapper = styled.button`
+padding: .5rem;
+border-radius:.5rem
+`

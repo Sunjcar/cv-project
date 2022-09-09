@@ -61,6 +61,44 @@ const Resume = () => {
       return { ...prevState, experience: [...newExp] }
     })
   }
+
+  const handleChangeEducation = (e, id) => {
+    const [name, value] = e.target
+    setResume((prevState) => {
+      const newEdu = prevState.education.map((eduItem) => {
+        if (eduItem.id === id) {
+          return { ...eduItem, [name]: value }
+        }
+        return eduItem
+      })
+      return { ...prevState, experience: [...newEdu] }
+    })
+  }
+
+  const handleAddEducation = () => {
+    setResume((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uniqid(),
+          course: '',
+          school: '',
+          from: '',
+          to: ''
+        }
+      ]
+    }))
+  }
+
+  const handleDeleteEducation = (id) => {
+    setResume((prevState) => {
+      const newEdu = prevState.education.filter(
+        (eduItem) => eduItem.id !== id
+      )
+      return { ...prevState, education: [...newEdu] }
+    })
+  }
   return (
     <div>
       <ResumeForm
@@ -68,7 +106,10 @@ const Resume = () => {
         onChangePersonal={handleChangePersonal}
         onChangeExperience={handleChangeExperience}
         onAddExperience={handleAddExperience}
-        onDeleteExperience={handleDeleteExperience} />
+        onDeleteExperience={handleDeleteExperience}
+        onChangeEducation={handleChangeEducation}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation} />
     </div>
   )
 }

@@ -1,7 +1,8 @@
 import uniqid from "uniqid";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ResumeTemplate from "./Utils/ResumeTemplate";
 import ResumeForm from "./ResumeForm";
+import Preview from "./Preview/Preview";
 
 
 
@@ -63,7 +64,7 @@ const Resume = () => {
   }
 
   const handleChangeEducation = (e, id) => {
-    const { name,value } = e.target
+    const { name, value } = e.target
 
     setResume((prevState) => {
       const newEdu = prevState.education.map((eduItem) => {
@@ -100,6 +101,8 @@ const Resume = () => {
       return { ...prevState, education: [...newEdu] }
     })
   }
+
+  const preview = useRef();
   return (
     <div>
       <ResumeForm
@@ -110,7 +113,11 @@ const Resume = () => {
         onDeleteExperience={handleDeleteExperience}
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
-        onDeleteEducation={handleDeleteEducation} />
+        onDeleteEducation={handleDeleteEducation}
+      />
+      <Preview
+        resume={resume} ref={preview}
+      />
     </div>
   )
 }

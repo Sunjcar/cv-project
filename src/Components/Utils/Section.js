@@ -23,17 +23,17 @@ const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: ${(props) => props.padding};
+  padding: 0;
   margin-bottom: 2rem;
 `;
 
 const Title = styled.h3`
-  padding: ${(props) => props.padding};
+  padding: 0;
   ${(props) =>
     props.contrast &&
     css`
-      border-bottom: 1px solid ${({ theme }) => theme.colors.lightBorder};
-      color: ${({ theme }) => theme.colors.blue};
+      border-bottom: 1px solid "#ccc";
+      color: #143E72;
     `}
 `;
 

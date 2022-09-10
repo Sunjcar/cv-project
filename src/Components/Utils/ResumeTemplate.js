@@ -15,6 +15,16 @@ const ResumeTemplate = {
             company: "",
             from: "",
             to: "",
+            description: '',
+        },
+    ],
+    education: [
+        {
+            id: uniqid(),
+            course: '',
+            school: '',
+            from: '',
+            to: '',
         },
     ],
 }

@@ -33,7 +33,7 @@ header {
 .Personal-Info {
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  padding-left: 2rem;
 }
 
 label {
@@ -73,7 +73,7 @@ label {
   justify-content: space-between;
 }
 
-.education-info {
+.education-time {
   display: flex;
   gap: .2rem
 }

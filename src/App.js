@@ -1,8 +1,5 @@
 import './App.css';
 import React, { Component } from 'react'
-import PersonalInfo from './Components/PersonalInfo';
-import Education from './Components/Education';
-import Experience from './Components/Experience';
 import Resume from './Components/Resume';
 
 export class App extends Component {
@@ -28,6 +25,7 @@ export class App extends Component {
     )
   }
 }
+
 
 
 export default App

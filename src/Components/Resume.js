@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ResumeTemplate from "./Utils/ResumeTemplate";
 import ResumeForm from "./ResumeForm";
 import Preview from "./Preview/Preview";
+import styledComponents from "styled-components";
 
 
 
@@ -104,7 +105,7 @@ const Resume = () => {
 
   const preview = useRef();
   return (
-    <div>
+    <Container>
       <ResumeForm
         resume={resume}
         onChangePersonal={handleChangePersonal}
@@ -118,9 +119,15 @@ const Resume = () => {
       <Preview
         resume={resume} ref={preview}
       />
-    </div>
+    </Container>
   )
 }
 
 export default Resume
 
+const Container = styledComponents.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 40px;
+`

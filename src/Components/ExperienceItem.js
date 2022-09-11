@@ -42,17 +42,10 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 placeholder="Description"
                 value={experienceItem.description}
             />
-            <ButtonWrapper>
-                <button onClick={() => onDelete(id)}>Delete</button>
-            </ButtonWrapper>
+            <button onClick={() => onDelete(id)}>Delete</button>
         </>
     );
 };
 
 
 export default ExperienceItem
-
-const ButtonWrapper = styled.button`
-padding: .5rem;
-border-radius:.5rem
-`

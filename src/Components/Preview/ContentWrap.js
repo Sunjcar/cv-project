@@ -16,8 +16,7 @@ const ContentWrap = ({ personalInfo, experience, education }) => {
     ));
     return (
         <div>
-            <Wrapper>
-                <Section title='Description' contrastTitle>
+                <Section>
                     {personalInfo.description}
                 </Section>
                 <Section title='Experience' direction='column' contrastTitle>
@@ -26,13 +25,8 @@ const ContentWrap = ({ personalInfo, experience, education }) => {
                 <Section title='Education' direction='column'  contrastTitle>
                     {educationItems}
                 </Section>
-            </Wrapper>
         </div>
     )
 }
 
 export default ContentWrap
-
-const Wrapper = styledComponents.div`
-padding: 2rem;
-`

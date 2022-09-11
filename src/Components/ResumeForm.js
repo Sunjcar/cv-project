@@ -36,12 +36,13 @@ const ResumeForm = ({
 }
 
 const FormWrapper = styled.div`
-    display:flex;
-    flex-direction: column;
-    gap: 1 rem;
-    width: 150mm;
-    padding: 2rem;
-    border radius: 5px;
-    background-color: gray
-    box-shadow: rgba (0,0,0,0.5) 0px 5px 10px`
+display:flex;
+flex-direction: column;
+gap: 5px;
+width: 150mm;
+padding: 1rem;
+border: 2px solid #195c70;
+border radius: 5px;
+background-color: gray
+box-shadow: rgba (0,0,0,0.5) 0px 5px 10px`
 export default ResumeForm

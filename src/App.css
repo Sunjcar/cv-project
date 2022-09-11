@@ -1,12 +1,12 @@
 * {
-  background-color: #cbd5e1;
+  background-color: white;
 }
 
 .main {
   display: flex;
   -webkit-box-pack: justify;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem;
   width: 100%
 }
@@ -34,6 +34,8 @@ header {
   display: flex;
   justify-content: space-between;
   padding-left: 2rem;
+  background-color: white;
+  border-bottom: 3px solid #81aebb;
 }
 
 label {
@@ -57,10 +59,17 @@ label {
   color: #195c70
 }
 
-.current-job,
-.task-text {
+.current-job {
   color: #5e5e5e
 }
+
+.Personal-Info h6,
+.full-name,
+.current-job,
+.contact-info {
+  background-color: white;
+}
+
 
 .education-title,
 .work-title {
@@ -94,10 +103,25 @@ label {
   display: flex;
 }
 
-.task-text {
-  word-wrap: break-word
+input,
+textarea {
+  border: 1px solid #5e5e5e;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
-.cv-view {
-  padding-left: 2rem
+button {
+  color: #333;
+  border: 1px solid #5e5e5e;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 150ms;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
 }

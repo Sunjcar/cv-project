@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React from 'react'
 import Input from './Utils/Input'
 import Section from './Utils/Section'
 import TextArea from './Utils/Textarea'
@@ -27,9 +27,9 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
       <Input
         onChange={(e) => onChange(e)}
         type="text"
-        name="address"
-        placeholder="Address"
-        value={personalInfo.address}
+        name="email"
+        placeholder="Email"
+        value={personalInfo.email}
       />
       <Input
         onChange={(e) => onChange(e)}
@@ -41,9 +41,9 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
       <Input
         onChange={(e) => onChange(e)}
         type="text"
-        name="email"
-        placeholder="Email"
-        value={personalInfo.email}
+        name="address"
+        placeholder="Address"
+        value={personalInfo.address}
       />
       <TextArea
         onChange={(e) => onChange(e)}

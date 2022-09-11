@@ -5,10 +5,10 @@ const Header = ({ personalInfo }) => {
     const { name, title, address, email, phoneNumber } = personalInfo
     return (
         <div className='Personal-Info'>
-            <div>
+            <Wrapper>
                 <h1 className='full-name'>{name}</h1>
                 <h3 className='current-job'>{title}</h3>
-            </div>
+            </Wrapper>
             <div className='contact-info'>
                 <h6>Email: {email}</h6>
                 <h6>Phone Number: {phoneNumber}</h6>
@@ -16,10 +16,10 @@ const Header = ({ personalInfo }) => {
             </div>
         </div>
 
-
     )
 }
 
 export default Header
 
-
+const Wrapper = styledComponents.div`
+background-color:white`

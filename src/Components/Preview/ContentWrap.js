@@ -16,9 +16,9 @@ const ContentWrap = ({ personalInfo, experience, education }) => {
     ));
     return (
         <div>
-                <Section>
+                <div className='personal-description'>
                     {personalInfo.description}
-                </Section>
+                </div>
                 <Section title='Experience' direction='column' contrastTitle>
                     {experienceItems}
                 </Section>

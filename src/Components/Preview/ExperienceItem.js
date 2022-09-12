@@ -15,7 +15,7 @@ const ExperienceItem = ({ experienceItem }) => {
         </div>
       </div>
 
-      <h6>{experienceItem.description}</h6>
+      <h6 className='work-description'>{experienceItem.description}</h6>
     </div>
   )
 }

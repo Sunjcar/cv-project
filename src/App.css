@@ -33,7 +33,6 @@ header {
 .Personal-Info {
   display: flex;
   justify-content: space-between;
-  padding-left: 2rem;
   background-color: white;
   border-bottom: 3px solid #81aebb;
 }
@@ -103,6 +102,10 @@ label {
   display: flex;
 }
 
+.work-description, .personal-description{
+  word-wrap: break-word;
+}
+
 input,
 textarea {
   border: 1px solid #5e5e5e;
@@ -119,6 +122,8 @@ button {
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 150ms;
+  width:5rem;
+  cursor: pointer;
 }
 
 button:hover {

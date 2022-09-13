@@ -13,9 +13,6 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <div className='header'>
-          <header> CV CREATOR </header>
-        </div>
         <div className='main'>
           <div>
             <Resume/>

@@ -16,6 +16,7 @@ const ResumeForm = ({
 }) => {
   return (
     <FormWrapper>
+      <Form>
       <PersonalInfo
         personalInfo={resume.personalInfo}
         onChange={onChangePersonal} />
@@ -31,18 +32,22 @@ const ResumeForm = ({
         onAdd={onAddEducation}
         onDelete={onDeleteEducation}
       />
+    </Form>
     </FormWrapper>
+
   )
 }
 
 const FormWrapper = styled.div`
-display:flex;
+width:595px;`
+
+const Form = styled.div`
+border: 2px solid #81aebb;
+border-radius: 5px;
+padding: 30px;
+display: flex;
 flex-direction: column;
-gap: 5px;
-width: 150mm;
-padding: 1rem;
-border: 2px solid #195c70;
-border radius: 5px;
-background-color: gray
-box-shadow: rgba (0,0,0,0.5) 0px 5px 10px`
+grid-gap: 25px;
+gap: 25px;
+`
 export default ResumeForm

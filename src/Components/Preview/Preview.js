@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
 import ContentWrap from './ContentWrap'
 import Header from './Header'
@@ -23,13 +23,12 @@ export class Preview extends Component {
 export default Preview
 
 const PreviewWrapper = styled.div`
-padding: 50px;
-width: 595px;
-min-width: 595px;
-height: 842px;
+width:595px;
+padding: 2rem;
 border-radius: 2px;
-border: 1px solid black;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border: 2px solid #81aebb;
 display: flex;
 flex-direction: column;
+height: 75vh;
+gap:1rem;
 `;

@@ -4,8 +4,7 @@ import ResumeTemplate from "./Utils/ResumeTemplate";
 import ResumeForm from "./ResumeForm";
 import Preview from "./Preview/Preview";
 import styledComponents from "styled-components";
-
-
+import LoadExample from "./Preview/LoadExample";
 
 const Resume = () => {
   const [resume, setResume] = useState(ResumeTemplate)
@@ -104,6 +103,14 @@ const Resume = () => {
   }
 
   const preview = useRef();
+
+  const handleLoadExample = () => {
+    setResume(LoadExample)
+  }
+
+  const handleReset = () => {
+    setResume(ResumeTemplate)
+  }
   return (
     <Container>
       <ResumeForm
@@ -115,6 +122,8 @@ const Resume = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onLoadExample={handleLoadExample}
+        onReset={handleReset}
       />
       <Preview
         resume={resume} ref={preview}

@@ -13,26 +13,32 @@ const ResumeForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onLoadExample,
+  onReset,
 }) => {
   return (
     <FormWrapper>
       <Form>
-      <PersonalInfo
-        personalInfo={resume.personalInfo}
-        onChange={onChangePersonal} />
-      <Experience
-        experience={resume.experience}
-        onChange={onChangeExperience}
-        onAdd={onAddExperience}
-        onDelete={onDeleteExperience}
-      />
-      <Education
-        education={resume.education}
-        onChange={onChangeEducation}
-        onAdd={onAddEducation}
-        onDelete={onDeleteEducation}
-      />
-    </Form>
+        <div>
+          <button onClick={onLoadExample}> Load Example </button>
+          <button onClick={onReset}> Reset Form</button>
+        </div>
+        <PersonalInfo
+          personalInfo={resume.personalInfo}
+          onChange={onChangePersonal} />
+        <Experience
+          experience={resume.experience}
+          onChange={onChangeExperience}
+          onAdd={onAddExperience}
+          onDelete={onDeleteExperience}
+        />
+        <Education
+          education={resume.education}
+          onChange={onChangeEducation}
+          onAdd={onAddEducation}
+          onDelete={onDeleteEducation}
+        />
+      </Form>
     </FormWrapper>
 
   )

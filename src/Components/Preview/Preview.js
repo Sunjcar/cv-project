@@ -29,6 +29,5 @@ border-radius: 2px;
 border: 2px solid #81aebb;
 display: flex;
 flex-direction: column;
-height: 75vh;
-gap:1rem;
+height: 800px;
 `;

@@ -14,16 +14,6 @@ body {
   padding: 20px;
 }
 
-.main {
-  display: flex;
-  -webkit-box-pack: justify;
-  gap: 2rem;
-  justify-content: center;
-  width: 100%;
-  padding:2rem;
-}
-
-
 .Resume {
   display: flex;
 }
@@ -43,16 +33,6 @@ label {
   text-align: right;
 }
 
-.cv-view {
-  min-width: 595px;
-  border-radius: 2px;
-  border: 1px solid #000;
-  box-shadow: 5px 0 6px 0 hsl(0deg 0% 0% / 20%);
-  justify-content: space-between;
-  padding-right: 1rem;
-  ;
-
-}
 
 .full-name {
   color: #195c70
@@ -107,6 +87,13 @@ label {
   word-wrap: break-word;
 }
 
+.personal-description{
+  padding-bottom:15px;
+}
+
+.work-description{
+  padding-top:10px;
+}
 input,
 textarea {
   border: 1px solid #5e5e5e;

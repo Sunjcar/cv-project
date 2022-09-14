@@ -22,4 +22,4 @@ const Header = ({ personalInfo }) => {
 export default Header
 
 const Wrapper = styledComponents.div`
-background-color:white`
+padding-bottom:20px;`

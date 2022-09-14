@@ -16,15 +16,16 @@ const ContentWrap = ({ personalInfo, experience, education }) => {
     ));
     return (
         <div>
-                <div className='personal-description'>
-                    {personalInfo.description}
-                </div>
-                <Section title='Experience' direction='column' contrastTitle>
-                    {experienceItems}
-                </Section>
-                <Section title='Education' direction='column'  contrastTitle>
-                    {educationItems}
-                </Section>
+            <div className='personal-description'>
+                {personalInfo.description}
+            </div>
+
+            <Section title='Experience' direction='column' contrastTitle>
+                {experienceItems}
+            </Section>
+            <Section title='Education' direction='column' contrastTitle>
+                {educationItems}
+            </Section>
         </div>
     )
 }

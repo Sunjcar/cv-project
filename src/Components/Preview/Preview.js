@@ -3,21 +3,22 @@ import styled from 'styled-components'
 import ContentWrap from './ContentWrap'
 import Header from './Header'
 
-
 export class Preview extends Component {
     render() {
         const { resume } = this.props
         return (
-            <PreviewWrapper>
-                <View>
-                    <Header personalInfo={resume.personalInfo} />
-                    <ContentWrap
-                        personalInfo={resume.personalInfo}
-                        experience={resume.experience}
-                        education={resume.education}
-                    />
-                </View>
-            </PreviewWrapper>
+            <div id='pdf-download'>
+                <PreviewWrapper>
+                    <View>
+                        <Header personalInfo={resume.personalInfo} />
+                        <ContentWrap
+                            personalInfo={resume.personalInfo}
+                            experience={resume.experience}
+                            education={resume.education}
+                        />
+                    </View>
+                </PreviewWrapper>
+            </div>
         )
     }
 }

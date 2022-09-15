@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
 import Education from "./Education";
+import DownloadPDF from "./Preview/DownloadPDF";
 
 const ResumeForm = ({
   resume,
@@ -19,10 +20,11 @@ const ResumeForm = ({
   return (
     <FormWrapper>
       <Form>
-        <div>
-          <button onClick={onLoadExample}> Load Example </button>
-          <button onClick={onReset}> Reset Form</button>
-        </div>
+        <Button>
+          <button className="load-example" onClick={onLoadExample}> Load Example </button>
+          <button className="reset-form" onClick={onReset}> Reset Form</button>
+          <DownloadPDF rootElementId={'pdf-download'} downloadFileName='resume'/>
+        </Button>
         <PersonalInfo
           personalInfo={resume.personalInfo}
           onChange={onChangePersonal} />
@@ -55,5 +57,9 @@ display: flex;
 flex-direction: column;
 grid-gap: 25px;
 gap: 25px;
+`
+const Button = styled.div`
+display:flex;
+justify-content: space-around;
 `
 export default ResumeForm

@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import styledComponents from 'styled-components'
+import React from 'react'
 import Section from '../Utils/Section'
 import EducationItem from './EducationItem';
 import ExperienceItem from './ExperienceItem';

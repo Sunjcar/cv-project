@@ -38,8 +38,8 @@ label {
   color: #195c70
 }
 
-.current-job {
-  color: #5e5e5e
+.current-job, .job-title {
+  color: #5e5e5e;
 }
 
 .Personal-Info h6,
@@ -85,14 +85,17 @@ label {
 .work-description,
 .personal-description {
   word-wrap: break-word;
+  font:italic;
 }
 
 .personal-description{
   padding-bottom:15px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .work-description{
   padding-top:10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 input,
 textarea {
@@ -117,4 +120,21 @@ button {
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
+}
+
+.load-example{
+  background-color:lightgreen
+}
+
+.reset-form{
+  background-color:lightcoral
+}
+
+.load-pdf{
+  background-color: #81aebb;
+}
+
+.load-pdf, .load-example, .reset-form{
+  display:flex;
+  justify-content: center;
 }

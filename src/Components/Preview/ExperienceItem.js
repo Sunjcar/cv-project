@@ -5,7 +5,7 @@ const ExperienceItem = ({ experienceItem }) => {
     <div>
       <div className='work-content'>
         <div>
-          <p>{experienceItem.position}</p>
+          <p className='job-title'>{experienceItem.position}</p>
         </div>
         <div className='company-time'>
           <p>{experienceItem.company} |</p>
@@ -15,7 +15,7 @@ const ExperienceItem = ({ experienceItem }) => {
         </div>
       </div>
 
-      <h6 className='work-description'>{experienceItem.description}</h6>
+      <p className='work-description'>{experienceItem.description}</p>
     </div>
   )
 }

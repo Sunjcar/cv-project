@@ -7,18 +7,18 @@ export class Preview extends Component {
     render() {
         const { resume } = this.props
         return (
-            <div id='pdf-download'>
-                <PreviewWrapper>
+            <PreviewWrapper>
                     <View>
+                    <div id='pdf-download'>
                         <Header personalInfo={resume.personalInfo} />
                         <ContentWrap
                             personalInfo={resume.personalInfo}
                             experience={resume.experience}
                             education={resume.education}
                         />
+                         </div>
                     </View>
-                </PreviewWrapper>
-            </div>
+            </PreviewWrapper>
         )
     }
 }

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
 import Education from "./Education";
-import DownloadPDF from "./Preview/DownloadPDF";
 
 const ResumeForm = ({
   resume,
@@ -23,7 +22,6 @@ const ResumeForm = ({
         <Button>
           <button className="load-example" onClick={onLoadExample}> Load Example </button>
           <button className="reset-form" onClick={onReset}> Reset Form</button>
-          <DownloadPDF rootElementId={'pdf-download'} downloadFileName='resume'/>
         </Button>
         <PersonalInfo
           personalInfo={resume.personalInfo}

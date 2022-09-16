@@ -1,7 +1,6 @@
 
 import React from "react";
 import Input from "./Utils/Input";
-import styled from "styled-components";
 import TextArea from "./Utils/Textarea";
 
 const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {

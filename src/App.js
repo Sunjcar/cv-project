@@ -1,28 +1,22 @@
 import './App.css';
-import React, { Component } from 'react'
+import React from 'react'
 import Resume from './Components/Resume';
+import Footer from './Footer';
+import styledComponents from 'styled-components';
 
-export class App extends Component {
-
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-    }
-  }
-  render() {
-    return (
-      <div>
-        <div className='main'>
-          <div>
-            <Resume/>
-        </div>
-      </div>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <Wrapper>
+      <Resume/>
+      <Footer/>
+    </Wrapper>
+  )
 }
 
-
-
 export default App
+
+const Wrapper = styledComponents.div`
+display:flex;
+min-height:100vh;
+flex-direction:column;
+justify-content:space-between`

@@ -1,7 +1,7 @@
 # cv-project app
-2
+
 Built with React JS
-3
+
 [Live Demo](https://sunjcar.github.io/cv-project/) :point_left:
 
 App displays template and form to fill out. Displays example and reset form if needed. Also able to download template as PDF once form is complete!
